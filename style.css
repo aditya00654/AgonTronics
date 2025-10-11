@@ -62,7 +62,7 @@ a{color:inherit;text-decoration:none}
 /* Projects */
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .project{background:#fafafa;border-radius:8px;padding:12px;border:1px solid #f0f0f0}
-.project-img{height:140px;background:linear-gradient(135deg,#f6f9ff,#f9fbff);border-radius:6px;margin-bottom:8px}
+.project-img{height:140px;border-radius:6px;margin-bottom:8px;background-size:cover;background-position:center}
 
 /* Contact */
 .contact-grid{display:flex;gap:20px;align-items:flex-start}
@@ -138,3 +138,9 @@ h1,h2,h3,h4,p,li,a,button,span,div{color:var(--text);opacity:1}
 /* Modal visibility enforced */
 .modal[aria-hidden="true"]{display:none !important;opacity:0;pointer-events:none}
 .modal[aria-hidden="false"]{display:flex !important;opacity:1;pointer-events:auto}
+
+
+/* Header contrast */
+.site-header .brand-title{color:var(--text);opacity:1}
+.site-header .brand-sub{color:var(--muted);opacity:1}
+.site-header .main-nav a{color:var(--text);opacity:0.95;font-weight:700}
