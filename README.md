@@ -36,4 +36,4 @@ Diseñamos, simulamos y desarrollamos sistemas electrónicos personalizados con 
 
 ### 📫 Contáctanos
 📧 **caicedosantiago256@gmail.com**  
-💬 [WhatsApp directo](htt)
+💬 [WhatsApp directo](https://wa.me/573107382104)
