@@ -114,7 +114,7 @@ a{color:inherit;text-decoration:none}
 /* Modal */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:60;padding:20px}
 .modal[aria-hidden="false"]{display:flex}
-.modal-content{background:var(--bg);color:var(--text);max-width:720px;padding:20px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6);position:relative}
+.modal-content{background:var(--bg);color:#111111;max-width:720px;padding:20px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6);position:relative}
 .modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;font-size:22px;color:var(--muted);cursor:pointer}
 .btn.small{padding:8px 12px;font-size:13px}
 
