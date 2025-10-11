@@ -1,113 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agontronics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgonTronics — Soluciones electrónicas para tus ideas</title>
+  <meta name="description" content="AgonTronics diseña, simula y programa sistemas electrónicos personalizados.">
+  <meta name="author" content="AgonTronics">
+
+  <!-- Tailwind CDN (sin build) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: iconos (Font Awesome) -->
+  <script src="https://kit.fontawesome.com/a2d9d6c7d3.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-[#0a0f1a] text-white font-sans">
+<body class="bg-gradient-to-b from-[#05060a] via-[#071022] to-[#081021] text-gray-100 antialiased">
 
-  <!-- Encabezado -->
-  <header class="relative h-screen flex flex-col items-center justify-center text-center px-4">
-    <img src="assets/fon.png" alt="Fondo" class="absolute inset-0 w-full h-full object-cover opacity-40" />
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/60 to-[#0a0f1a]"></div>
+  <!-- SITE HEADER (top navigation + brand) -->
+  <header class="sticky top-0 z-40 bg-transparent/50 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="AgonTronics logo" class="w-12 h-12 rounded-md object-contain">
+        <div>
+          <div class="text-lg font-semibold text-blue-400">AgonTronics</div>
+          <div class="text-xs text-gray-400">Soluciones electrónicas para tus ideas</div>
+        </div>
+      </div>
 
-    <div class="relative z-10">
-      <img src="assets/logo.png" alt="Logo Agontronics" class="mx-auto mb-6 w-28 md:w-40 drop-shadow-lg" />
-      <h1 class="text-4xl md:text-6xl font-bold text-blue-400">Agontronics</h1>
-      <p class="text-gray-300 mt-4 text-lg md:text-xl max-w-xl mx-auto">
-        Innovación tecnológica aplicada a la ingeniería electrónica y automatización.
-      </p>
+      <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+        <a href="#sobre" class="hover:text-blue-300 transition">Sobre</a>
+        <a href="#servicios-destacados" class="hover:text-blue-300 transition">Servicios destacados</a>
+        <a href="#sobre-servicios" class="hover:text-blue-300 transition">Sobre los servicios</a>
+        <a href="#servicios" class="hover:text-blue-300 transition">Qué servicios hay</a>
+        <a href="#portfolio" class="hover:text-blue-300 transition">Proyectos</a>
+        <a href="#contact" class="hover:text-blue-300 transition">Contacto</a>
+      </nav>
+
+      <!-- Mobile: simple menu toggle -->
+      <div class="md:hidden">
+        <button id="mobile-toggle" class="p-2 rounded-md text-gray-300 hover:bg-gray-800/50">
+          <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#061123] border-t border-gray-800">
+      <div class="px-6 py-4 flex flex-col gap-3 text-gray-200">
+        <a href="#sobre" class="py-2">Sobre</a>
+        <a href="#servicios-destacados" class="py-2">Servicios destacados</a>
+        <a href="#sobre-servicios" class="py-2">Sobre los servicios</a>
+        <a href="#servicios" class="py-2">Qué servicios hay</a>
+        <a href="#portfolio" class="py-2">Proyectos</a>
+        <a href="#contact" class="py-2">Contacto</a>
+      </div>
     </div>
   </header>
 
-  <!-- Proyectos -->
-  <section class="py-16 px-6 md:px-20 bg-[#0c1220]" id="proyectos">
-    <h2 class="text-3xl font-bold text-blue-400 text-center mb-10">Proyectos</h2>
+  <!-- HERO / ENCABEZADO (con fon.png y overlay azul, no quita tono oscuro) -->
+  <section id="hero" class="relative">
+    <div class="h-[56vh] md:h-[68vh] lg:h-[70vh] bg-cover bg-center" style="background-image:url('assets/fon.png');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-[#021022]/50 to-black/60"></div> <!-- overlay suave -->
+      <div class="absolute inset-0 max-w-6xl mx-auto px-6 flex items-center">
+        <div class="relative z-10 text-center md:text-left py-12 md:py-0">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <img src="assets/logo.png" alt="AgonTronics logo" class="w-14 h-14 rounded-md">
+            <div>
+              <div class="text-2xl font-semibold text-blue-300">AgonTronics</div>
+              <div class="text-xs text-gray-300">Soluciones electrónicas para tus ideas</div>
+            </div>
+          </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Proyecto 1 -->
-      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg hover:shadow-blue-500/20 transition">
-        <img src="assets/robot.png" alt="Robot Evasor" class="w-full h-52 object-cover" />
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold text-blue-300 mb-2">Robot evasor de obstáculos</h3>
-          <p class="text-gray-400">Sistema autónomo de detección y evasión de obstáculos con sensores ultrasónicos.</p>
-          <button onclick="openModal('modal1')" class="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">Ver más</button>
-        </div>
-      </div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-4">
+            Diseño, simulación y prototipado electrónico con rigor técnico
+          </h1>
+          <p class="max-w-2xl text-gray-300 mb-6">
+            AgonTronics crea soluciones a medida: desde esquemas y simulaciones hasta código y talleres prácticos.
+          </p>
 
-      <!-- Proyecto 2 -->
-      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg hover:shadow-blue-500/20 transition">
-        <img src="assets/inve.png" alt="Riego automático" class="w-full h-52 object-cover" />
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold text-blue-300 mb-2">Sistema de riego automático</h3>
-          <p class="text-gray-400">Control inteligente de riego basado en sensores de humedad y energía renovable.</p>
-          <button onclick="openModal('modal2')" class="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">Ver más</button>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+            <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-3 rounded-md shadow">Solicitar presupuesto</a>
+            <a href="#portfolio" class="inline-flex items-center gap-2 border border-blue-600 text-blue-300 hover:bg-blue-700/20 px-5 py-3 rounded-md">Ver proyectos</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modales -->
-  <div id="modal1" class="modal hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-    <div class="bg-[#111827] rounded-xl p-6 w-11/12 md:w-1/2 relative shadow-lg">
-      <button onclick="closeModal('modal1')" class="absolute top-3 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
-      <h3 class="text-2xl font-bold text-blue-400 mb-4">Robot evasor de obstáculos</h3>
-      <p class="text-gray-300 leading-relaxed">
-        Este robot autónomo utiliza sensores ultrasónicos y un microcontrolador para detectar obstáculos
-        y ajustar su trayectoria en tiempo real. Ideal para aplicaciones educativas y de investigación
-        en robótica móvil e inteligencia artificial básica.
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-4">Sobre nosotros</h2>
+      <p class="text-gray-300">
+        AgonTronics diseña, simula y programa sistemas electrónicos personalizados. Brindamos soluciones completas — desde el esquema hasta el prototipo y la documentación técnica — con foco en calidad y entrega.
       </p>
-    </div>
-  </div>
+    </section>
 
-  <div id="modal2" class="modal hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-    <div class="bg-[#111827] rounded-xl p-6 w-11/12 md:w-1/2 relative shadow-lg">
-      <button onclick="closeModal('modal2')" class="absolute top-3 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
-      <h3 class="text-2xl font-bold text-blue-400 mb-4">Sistema de riego automático</h3>
-      <p class="text-gray-300 leading-relaxed">
-        Proyecto de automatización que gestiona el riego de cultivos mediante sensores de humedad del suelo
-        y energía renovable. Reduce el desperdicio de agua y mejora la eficiencia energética.
+    <!-- SERVICIOS DESTACADOS -->
+    <section id="servicios-destacados" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Servicios destacados</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#07101a] border border-gray-800 shadow-sm">
+          <h3 class="text-lg font-semibold text-white mb-2">Simulaciones (Proteus, Multisim, SPICE)</h3>
+          <p class="text-gray-400 text-sm">Modelado, análisis de señales y validación antes de la fabricación.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07101a] border border-gray-800 shadow-sm">
+          <h3 class="text-lg font-semibold text-white mb-2">Programación (Arduino, ESP32, Python)</h3>
+          <p class="text-gray-400 text-sm">Firmware robusto, comunicación y control para tus proyectos IoT o embebidos.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07101a] border border-gray-800 shadow-sm">
+          <h3 class="text-lg font-semibold text-white mb-2">Diseño de PCB (KiCad) y documentación</h3>
+          <p class="text-gray-400 text-sm">Diseños listos para fabricar con archivos Gerber y documentación técnica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE LOS SERVICIOS -->
+    <section id="sobre-servicios" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-4">Sobre los servicios</h2>
+      <p class="text-gray-300">
+        Ofrecemos un flujo de trabajo profesional que cubre: selección de componentes, simulaciones, diseño de PCB, pruebas en prototipo, desarrollo de firmware y documentación técnica completa. Adaptamos el nivel de detalle para proyectos académicos, industriales o prototipos comerciales.
       </p>
-    </div>
-  </div>
+    </section>
 
-  <!-- Contacto rápido -->
-  <section class="py-14 px-6 md:px-20 bg-[#0a0f1a]" id="contacto">
-    <h2 class="text-3xl font-bold text-blue-400 text-center mb-10">Contacto rápido</h2>
+    <!-- QUÉ SERVICIOS HAY (grid con los 6 originales) -->
+    <section id="servicios" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Qué servicios hay</h2>
 
-    <div class="max-w-lg mx-auto bg-[#111827] p-6 rounded-2xl shadow-lg space-y-4 text-center">
-      <p class="text-gray-300">¿Quieres más información o colaborar en un proyecto?</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Diseño y esquemáticos</h3>
+          <p class="text-gray-400 text-sm">Esquemáticos profesionales, selección de componentes y análisis de hojas de datos.</p>
+        </article>
 
-      <a href="https://wa.me/57XXXXXXXXXX" target="_blank"
-         class="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-green-500/30">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 mr-2">
-           <path d="M16.7 13.6c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.3-.7.1s-1.4-.5-2.7-1.8c-1-1-1.8-2.2-2-2.6-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.6s-.7-1.8-1-2.5c-.3-.7-.5-.6-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.7c.2.3 2.3 3.6 5.5 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2-1.5.2-.7.2-1.3.1-1.5-.1-.1-.2-.1-.5-.3z"/>
-         </svg>
-         WhatsApp
-      </a>
-    </div>
-  </section>
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Simulación y validación</h3>
+          <p class="text-gray-400 text-sm">Modelado y verificación en Proteus, Multisim y SPICE; pruebas de señal y rendimiento.</p>
+        </article>
 
-  <footer class="text-center text-gray-500 text-sm py-6 bg-[#0a0f1a]">
-    © 2025 Agontronics. Todos los derechos reservados.
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Programación y firmware</h3>
+          <p class="text-gray-400 text-sm">Desarrollo de firmware para microcontroladores, comunicación IoT y control de motores.</p>
+        </article>
+
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">PCB y prototipado</h3>
+          <p class="text-gray-400 text-sm">Diseño de PCB en KiCad, archivos Gerber y asistencia en fabricación.</p>
+        </article>
+
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Documentación técnica</h3>
+          <p class="text-gray-400 text-sm">Manuales, diagramas e informes técnicos listos para entrega académica o industrial.</p>
+        </article>
+
+        <article class="p-6 bg-[#07121a] rounded-2xl border border-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Talleres y formación</h3>
+          <p class="text-gray-400 text-sm">Sesiones prácticas presenciales o en línea sobre electrónica y microcontroladores.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROYECTOS HECHOS -->
+    <section id="portfolio" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Proyectos</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Proyecto 1 (PWM) -->
+        <div class="rounded-2xl overflow-hidden bg-[#07121a] border border-gray-800 shadow">
+          <div class="h-44 bg-cover bg-center" style="background-image:url('assets/proj1_img1.png')"></div>
+          <div class="p-5">
+            <h4 class="text-lg font-semibold text-white">Sistema de control de velocidad (PWM)</h4>
+            <p class="text-gray-400 text-sm mb-4">Puente H con MOSFETs, control por ESP32 y monitoreo.</p>
+            <button class="btn-modal inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-500 text-white"
+                    data-modal="modal-pwm">Ver más</button>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 (Robot evasor) -->
+        <div class="rounded-2xl overflow-hidden bg-[#07121a] border border-gray-800 shadow">
+          <div class="h-44 bg-cover bg-center" style="background-image:url('assets/robot.png')"></div>
+          <div class="p-5">
+            <h4 class="text-lg font-semibold text-white">Robot evasor de obstáculos</h4>
+            <p class="text-gray-400 text-sm mb-4">Autónomo con sensor ultrasónico y navegación simple.</p>
+            <button class="btn-modal inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-500 text-white"
+                    data-modal="modal-robot">Ver más</button>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 (Riego) -->
+        <div class="rounded-2xl overflow-hidden bg-[#07121a] border border-gray-800 shadow">
+          <div class="h-44 bg-cover bg-center" style="background-image:url('assets/inve.png')"></div>
+          <div class="p-5">
+            <h4 class="text-lg font-semibold text-white">Sistema de riego con energía renovable</h4>
+            <p class="text-gray-400 text-sm mb-4">Integración de panel solar y control remoto.</p>
+            <button class="btn-modal inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-500 text-white"
+                    data-modal="modal-riego">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modales: PWM -->
+      <div id="modal-pwm" class="modal fixed inset-0 hidden items-center justify-center z-50">
+        <div class="modal-backdrop absolute inset-0 bg-black/70"></div>
+        <div class="modal-panel relative bg-[#08101a] border border-gray-700 rounded-2xl max-w-2xl w-full mx-4 p-6 z-10 slide-up">
+          <button class="modal-close absolute right-4 top-4 text-gray-400 hover:text-white text-xl">&times;</button>
+          <h3 class="text-xl font-semibold text-blue-300 mb-3">Sistema de control de velocidad (PWM)</h3>
+          <p class="text-gray-300">
+            Diseño del puente H con MOSFETs adecuados para 3V–50V, control por ESP32, implementación de PID básico para control de velocidad, monitoreo de temperatura y RPM, y documentación completa con esquemas, firmware y archivos Gerber.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal: Robot -->
+      <div id="modal-robot" class="modal fixed inset-0 hidden items-center justify-center z-50">
+        <div class="modal-backdrop absolute inset-0 bg-black/70"></div>
+        <div class="modal-panel relative bg-[#08101a] border border-gray-700 rounded-2xl max-w-2xl w-full mx-4 p-6 z-10 slide-up">
+          <button class="modal-close absolute right-4 top-4 text-gray-400 hover:text-white text-xl">&times;</button>
+          <h3 class="text-xl font-semibold text-blue-300 mb-3">Robot evasor de obstáculos</h3>
+          <p class="text-gray-300">
+            Robot autónomo con sensor ultrasónico HC-SR04, control por microcontrolador, lógica de evasión, pruebas de rendimiento, vídeo demostrativo y código comentado listo para entrega académica.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal: Riego -->
+      <div id="modal-riego" class="modal fixed inset-0 hidden items-center justify-center z-50">
+        <div class="modal-backdrop absolute inset-0 bg-black/70"></div>
+        <div class="modal-panel relative bg-[#08101a] border border-gray-700 rounded-2xl max-w-2xl w-full mx-4 p-6 z-10 slide-up">
+          <button class="modal-close absolute right-4 top-4 text-gray-400 hover:text-white text-xl">&times;</button>
+          <h3 class="text-xl font-semibold text-blue-300 mb-3">Sistema de riego con energía renovable</h3>
+          <p class="text-gray-300">
+            Integración de panel solar, controlador de carga, válvulas eléctricas, telemetría básica y simulación del consumo energético. Documentación técnica y guía de montaje.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACTO RÁPIDO (form + tarjeta compacta con WhatsApp boton) -->
+    <section id="contact" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-300 mb-6">Contacto</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Formulario -->
+        <form class="bg-[#071021] p-6 rounded-2xl border border-gray-800" action="mailto:caicedosantiago256@gmail.com" method="post" enctype="text/plain">
+          <label for="name" class="block text-sm text-gray-300 mb-1">Tu nombre</label>
+          <input id="name" name="name" required class="w-full mb-3 p-2 rounded bg-[#07131a] border border-gray-700 text-gray-100">
+
+          <label for="email" class="block text-sm text-gray-300 mb-1">Correo</label>
+          <input id="email" name="email" type="email" required class="w-full mb-3 p-2 rounded bg-[#07131a] border border-gray-700 text-gray-100">
+
+          <label for="message" class="block text-sm text-gray-300 mb-1">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required class="w-full mb-4 p-2 rounded bg-[#07131a] border border-gray-700 text-gray-100"></textarea>
+
+          <button type="submit" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md">Enviar mensaje</button>
+        </form>
+
+        <!-- Contacto rápido (compacto) -->
+        <aside class="bg-[#071021] p-5 rounded-2xl border border-gray-800 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-blue-300 mb-2">Contacto rápido</h3>
+            <p class="text-gray-300 text-sm mb-3">Email: <a class="text-blue-300 hover:underline" href="mailto:caicedosantiago256@gmail.com">caicedosantiago256@gmail.com</a></p>
+            <p class="text-gray-400 text-sm mb-3">También puedes reservar talleres o solicitar cotización vía WhatsApp.</p>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://wa.me/573001112233" target="_blank" rel="noopener noreferrer"
+               class="w-full inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5a] text-black font-semibold px-4 py-2 rounded-lg shadow">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 py-6 text-center text-gray-500">
+    © AgonTronics — Soluciones electrónicas para tus ideas
   </footer>
 
+  <!-- SCRIPTS: mobile menu, modals (one open at a time), accessibility -->
   <script>
-    function openModal(id) {
-      document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-open');
+    const menuCloseIcon = document.getElementById('menu-close');
+    mobileToggle && mobileToggle.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('hidden');
+      if(open){
+        mobileMenu.classList.add('hidden');
+        menuOpenIcon.classList.remove('hidden');
+        menuCloseIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuOpenIcon.classList.add('hidden');
+        menuCloseIcon.classList.remove('hidden');
+      }
+    });
+
+    // Modal behavior: open, close, only one at a time, close on backdrop click or Esc
+    const openButtons = document.querySelectorAll('.btn-modal');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.modal-close');
+
+    function closeAllModals(){
+      modals.forEach(m => m.classList.add('hidden'));
     }
-    function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
-    }
-    // Cerrar modal haciendo clic fuera
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', e => {
-        if (e.target === modal) modal.classList.add('hidden');
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.modal;
+        // close others
+        closeAllModals();
+        const modal = document.getElementById(id);
+        if(modal) modal.classList.remove('hidden');
+        // trap focus (simple)
+        setTimeout(()=> {
+          modal && modal.querySelector('.modal-panel') && modal.querySelector('.modal-panel').focus();
+        }, 50);
       });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').classList.add('hidden');
+      });
+    });
+
+    modals.forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        // click on backdrop closes
+        if(e.target.classList.contains('modal') || e.target.classList.contains('modal-backdrop')) {
+          modal.classList.add('hidden');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeAllModals();
     });
   </script>
 </body>
