@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}
 .logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--primary);color:var(--white);font-weight:700;font-size:18px}
 .brand-title{font-weight:700}
 .brand-sub{font-size:13px;color:var(--muted)}
-.main-nav a{margin-left:18px;font-weight:600;color:var(--primary);opacity:0.95}
+.main-nav a{margin-left:18px;font-weight:600;color:var(--primary);}
 
 /* Hero */
 .hero{display:flex;gap:40px;align-items:center;padding:56px 0}
@@ -128,3 +128,13 @@ a{color:var(--primary)}
 .carousel-dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
 .carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.12);cursor:pointer}
 .carousel-dot.active{background:var(--accent)}
+
+
+/* Ensure full contrast for primary text */
+h1,h2,h3,h4,p,li,a,button,span,div{color:var(--text);opacity:1}
+.muted{color:var(--muted);opacity:1}
+
+
+/* Modal visibility enforced */
+.modal[aria-hidden="true"]{display:none !important;opacity:0;pointer-events:none}
+.modal[aria-hidden="false"]{display:flex !important;opacity:1;pointer-events:auto}

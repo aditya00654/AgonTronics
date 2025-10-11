@@ -24,6 +24,7 @@
         <a href="#talleres">Talleres</a>
         <a href="#contact">Contacto</a>
       </nav>
+      <a class="btn primary" href="https://wa.me/qr/A6GDXRAA5AYZG1" target="_blank" style="margin-left:12px">WhatsApp</a>
     </div>
   </header>
 
@@ -104,21 +105,21 @@
       </div>
 
       <!-- Modals -->
-      <div id="modal1" class="modal" aria-hidden="true">
+      <div id="modal1" class="modal" aria-hidden="true" aria-hidden="true">
         <div class="modal-content">
           <button class="modal-close" data-modal-close>×</button>
           <h3>Sistema de control de velocidad (PWM)</h3>
           <p>Diseño del puente H con MOSFETs adecuados para 3V–50V, control por ESP32, implementación de PID básico para control de velocidad, monitoreo de temperatura y RPM, y documentación completa con esquemas, firmware y archivos Gerber.</p>
         </div>
       </div>
-      <div id="modal2" class="modal" aria-hidden="true">
+      <div id="modal2" class="modal" aria-hidden="true" aria-hidden="true">
         <div class="modal-content">
           <button class="modal-close" data-modal-close>×</button>
           <h3>Robot evasor de obstáculos</h3>
           <p>Robot autónomo con sensor ultrasónico HC-SR04, control por microcontrolador, lógica de evasión, pruebas de rendimiento, vídeo demostrativo y código comentado listo para entrega académica.</p>
         </div>
       </div>
-      <div id="modal3" class="modal" aria-hidden="true">
+      <div id="modal3" class="modal" aria-hidden="true" aria-hidden="true">
         <div class="modal-content">
           <button class="modal-close" data-modal-close>×</button>
           <h3>Sistema de riego con energía renovable</h3>
@@ -168,7 +169,7 @@
         <aside class="contact-aside">
           <div class="card">
             <h3>Contacto rápido</h3>
-            <p class="muted">WhatsApp: <a href="https://wa.me/573107382104" target="_blank">+57 310 738 2104</a></p>
+            <p class="muted">WhatsApp: <a href="https://wa.me/qr/A6GDXRAA5AYZG1" target="_blank">+57 310 738 2104</a></p>
             <p class="muted">Email: caicedosantiago256@gmail.com</p>
             <p><a href="#talleres" class="btn outline">Reservar taller</a></p>
           </div>
@@ -241,6 +242,14 @@ document.addEventListener('click', function(e){
   if(e.target.classList.contains('modal')){
     e.target.setAttribute('aria-hidden','true');
   }
+});
+</script>
+
+
+<script>
+// Ensure modals are hidden on load
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.modal').forEach(m=> m.setAttribute('aria-hidden','true'));
 });
 </script>
 
