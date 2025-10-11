@@ -117,18 +117,6 @@ a{color:var(--primary)}
 .btn.primary{background:var(--primary);color:#041122}
 
 
-/* Carousel inside modal */
-.carousel{position:relative;overflow:hidden;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-.carousel-track{display:flex;transition:transform 0.35s ease}
-.carousel-slide{min-width:100%;flex:0 0 100%;display:flex;align-items:center;justify-content:center}
-.carousel-slide img{width:100%;height:auto;display:block;border-radius:6px}
-.carousel-control{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);color:var(--text);border:0;padding:8px 10px;border-radius:6px;cursor:pointer}
-.carousel-prev{left:10px}
-.carousel-next{right:10px}
-.carousel-dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
-.carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.12);cursor:pointer}
-.carousel-dot.active{background:var(--accent)}
-
 
 /* Ensure full contrast for primary text */
 h1,h2,h3,h4,p,li,a,button,span,div{color:var(--text);opacity:1}
