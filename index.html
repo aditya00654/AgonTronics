@@ -38,6 +38,7 @@
         </div>
       </div>
       <aside class="hero-right">
+        <img src="assets/header_deco.png" alt="" style="width:100%;border-radius:8px;margin-bottom:12px">
         <div class="card">
           <h3>Servicios destacados</h3>
           <ul>
@@ -197,6 +198,46 @@ document.addEventListener('click', function(e){
     if(modal) modal.setAttribute('aria-hidden','true');
   }
   // click outside modal-content closes
+  if(e.target.classList.contains('modal')){
+    e.target.setAttribute('aria-hidden','true');
+  }
+});
+</script>
+
+
+<script>
+function initCarousel(modal){
+  const track = modal.querySelector('.carousel-track');
+  const slides = Array.from(modal.querySelectorAll('.carousel-slide'));
+  const prev = modal.querySelector('.carousel-prev');
+  const next = modal.querySelector('.carousel-next');
+  const dots = Array.from(modal.querySelectorAll('.carousel-dot'));
+  let index = 0;
+  function update(){
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+  }
+  prev.addEventListener('click', ()=>{ index = (index-1+slides.length)%slides.length; update(); });
+  next.addEventListener('click', ()=>{ index = (index+1)%slides.length; update(); });
+  dots.forEach(d=> d.addEventListener('click', ()=>{ index = Number(d.getAttribute('data-index')); update(); }));
+  update();
+}
+document.addEventListener('click', function(e){
+  const modalBtn = e.target.closest('[data-modal]');
+  if(modalBtn){
+    const id = modalBtn.getAttribute('data-modal');
+    const modal = document.getElementById(id);
+    if(modal){
+      modal.setAttribute('aria-hidden','false');
+      // init carousel lazily
+      setTimeout(()=>{ initCarousel(modal); }, 50);
+    }
+  }
+  const closeBtn = e.target.closest('[data-modal-close]');
+  if(closeBtn){
+    const modal = closeBtn.closest('.modal');
+    if(modal) modal.setAttribute('aria-hidden','true');
+  }
   if(e.target.classList.contains('modal')){
     e.target.setAttribute('aria-hidden','true');
   }
