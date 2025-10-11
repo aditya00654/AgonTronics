@@ -6,238 +6,135 @@
   <title>AgonTronics — Soluciones electrónicas para tus ideas</title>
   <meta name="description" content="AgonTronics diseña, simula y programa sistemas electrónicos personalizados.">
   <meta name="author" content="AgonTronics">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo-wrap" aria-hidden="true"><img src="assets/logo.png" alt="AgonTronics logo" class="logo-img"></div>
-        <div class="brand-text">
-          <div class="brand-title">AgonTronics</div>
-          <div class="brand-sub">Soluciones electrónicas para tus ideas</div>
+
+<body class="bg-[#0b0e14] text-gray-200 font-sans leading-relaxed">
+  <!-- Header -->
+  <header class="border-b border-gray-800 bg-[#0d1117]/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="AgonTronics logo" class="w-12 h-12">
+        <div>
+          <h1 class="text-xl font-bold text-blue-400">AgonTronics</h1>
+          <p class="text-sm text-gray-400">Soluciones electrónicas para tus ideas</p>
         </div>
       </div>
-      <nav class="main-nav">
-        <a href="#services">Servicios</a>
-        <a href="#portfolio">Proyectos</a>
-        <a href="#talleres">Talleres</a>
-        <a href="#contact">Contacto</a>
+      <nav class="hidden md:flex gap-6 text-gray-300">
+        <a href="#services" class="hover:text-blue-400 transition">Servicios</a>
+        <a href="#portfolio" class="hover:text-blue-400 transition">Proyectos</a>
+        <a href="#talleres" class="hover:text-blue-400 transition">Talleres</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contacto</a>
       </nav>
-      
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Diseño, simulación y prototipado electrónico con rigor técnico</h1>
-        <p class="lead">AgonTronics crea soluciones a medida: desde esquemas y simulaciones hasta código y talleres prácticos.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="#contact">Solicitar presupuesto</a>
-          <a class="btn outline" href="#portfolio">Ver proyectos</a>
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <!-- Hero -->
+    <section class="flex flex-col lg:flex-row items-center gap-10">
+      <div class="lg:w-2/3">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-400 mb-4">Diseño, simulación y prototipado electrónico con rigor técnico</h2>
+        <p class="text-gray-400 mb-6 text-lg">AgonTronics crea soluciones a medida: desde esquemas y simulaciones hasta código y talleres prácticos.</p>
+        <div class="flex gap-4">
+          <a href="#contact" class="btn-primary">Solicitar presupuesto</a>
+          <a href="#portfolio" class="btn-outline">Ver proyectos</a>
         </div>
       </div>
-      <aside class="hero-right">
-        <div class="card">
-          <h3>Servicios destacados</h3>
-          <ul>
-            <li>Simulaciones (Proteus, Multisim, SPICE)</li>
-            <li>Programación (Arduino, ESP32, Python)</li>
-            <li>Diseño de PCB (KiCad) y documentación técnica</li>
-          </ul>
-        </div>
+      <aside class="lg:w-1/3 bg-[#111827] p-6 rounded-2xl shadow-xl border border-gray-800">
+        <h3 class="text-xl font-semibold mb-3 text-blue-300">Servicios destacados</h3>
+        <ul class="space-y-2 text-gray-400 list-disc list-inside">
+          <li>Simulaciones (Proteus, Multisim, SPICE)</li>
+          <li>Programación (Arduino, ESP32, Python)</li>
+          <li>Diseño de PCB (KiCad) y documentación técnica</li>
+        </ul>
       </aside>
     </section>
 
-    <section id="services" class="section">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <article class="service">
-          <h3>Diseño y esquemáticos</h3>
-          <p>Esquemáticos profesionales, selección de componentes y análisis de hojas de datos.</p>
-        </article>
-        <article class="service">
-          <h3>Simulación y validación</h3>
-          <p>Modelado y verificación en Proteus, Multisim y SPICE; pruebas de señal y rendimiento.</p>
-        </article>
-        <article class="service">
-          <h3>Programación y firmware</h3>
-          <p>Desarrollo de firmware para microcontroladores, comunicación IoT y control de motores.</p>
-        </article>
-        <article class="service">
-          <h3>PCB y prototipado</h3>
-          <p>Diseño de PCB en KiCad, archivos Gerber y asistencia en fabricación.</p>
-        </article>
-        <article class="service">
-          <h3>Documentación técnica</h3>
-          <p>Manuales, diagramas e informes técnicos listos para entrega académica o industrial.</p>
-        </article>
-        <article class="service">
-          <h3>Talleres y formación</h3>
-          <p>Sesiones prácticas presenciales o en línea sobre electrónica y microcontroladores.</p>
-        </article>
+    <!-- Servicios -->
+    <section id="services" class="mt-24">
+      <h2 class="section-title">Servicios</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div class="card"> <h3>Diseño y esquemáticos</h3><p>Esquemáticos profesionales, selección de componentes y análisis de hojas de datos.</p></div>
+        <div class="card"> <h3>Simulación y validación</h3><p>Modelado y verificación en Proteus, Multisim y SPICE; pruebas de señal y rendimiento.</p></div>
+        <div class="card"> <h3>Programación y firmware</h3><p>Desarrollo de firmware para microcontroladores, comunicación IoT y control de motores.</p></div>
+        <div class="card"> <h3>PCB y prototipado</h3><p>Diseño de PCB en KiCad, archivos Gerber y asistencia en fabricación.</p></div>
+        <div class="card"> <h3>Documentación técnica</h3><p>Manuales, diagramas e informes técnicos listos para entrega académica o industrial.</p></div>
+        <div class="card"> <h3>Talleres y formación</h3><p>Sesiones prácticas presenciales o en línea sobre electrónica y microcontroladores.</p></div>
       </div>
     </section>
 
-    <section id="portfolio" class="section">
-      <h2>Proyectos</h2>
-      <div class="projects">
-        <div class="project">
-          <div class="project-img" role="img" aria-label="Proyecto 1" style="background-image:url('assets/proj1_img1.png')"></div>
-          <h4>Sistema de control de velocidad (PWM)</h4>
-          <p class="muted">Puente H con MOSFETs, control por ESP32 y monitoreo.</p>
-          <button class="btn outline small" data-modal="modal1">Ver más</button>
+    <!-- Proyectos -->
+    <section id="portfolio" class="mt-24">
+      <h2 class="section-title">Proyectos</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-8">
+        <div class="project-card" style="background-image:url('assets/proj1_img1.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h4>Sistema de control de velocidad (PWM)</h4>
+            <p>Puente H con MOSFETs, control por ESP32 y monitoreo.</p>
+          </div>
         </div>
-        <div class="project">
-          <div class="project-img" role="img" aria-label="Proyecto 2" style="background-image:url('assets/proj2_img1.png')"></div>
-          <h4>Robot evasor de obstáculos</h4>
-          <p class="muted">Autónomo con sensor ultrasónico y navegación simple.</p>
-          <button class="btn outline small" data-modal="modal2">Ver más</button>
+        <div class="project-card" style="background-image:url('assets/proj2_img1.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h4>Robot evasor de obstáculos</h4>
+            <p>Autónomo con sensor ultrasónico y navegación simple.</p>
+          </div>
         </div>
-        <div class="project">
-          <div class="project-img" role="img" aria-label="Proyecto 3" style="background-image:url('assets/proj3_img1.png')"></div>
-          <h4>Sistema de riego con energía renovable</h4>
-          <p class="muted">Integración de panel solar y control remoto.</p>
-          <button class="btn outline small" data-modal="modal3">Ver más</button>
-        </div>
-      </div>
-
-      <!-- Modals -->
-      <div id="modal1" class="modal" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" data-modal-close>×</button>
-          <h3>Sistema de control de velocidad (PWM)</h3>
-          <p>Diseño del puente H con MOSFETs adecuados para 3V–50V, control por ESP32, implementación de PID básico para control de velocidad, monitoreo de temperatura y RPM, y documentación completa con esquemas, firmware y archivos Gerber.</p>
+        <div class="project-card" style="background-image:url('assets/proj3_img1.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h4>Sistema de riego con energía renovable</h4>
+            <p>Integración de panel solar y control remoto.</p>
+          </div>
         </div>
       </div>
-      <div id="modal2" class="modal" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" data-modal-close>×</button>
-          <h3>Robot evasor de obstáculos</h3>
-          <p>Robot autónomo con sensor ultrasónico HC-SR04, control por microcontrolador, lógica de evasión, pruebas de rendimiento, vídeo demostrativo y código comentado listo para entrega académica.</p>
-        </div>
-      </div>
-      <div id="modal3" class="modal" aria-hidden="true">
-        <div class="modal-content">
-          <button class="modal-close" data-modal-close>×</button>
-          <h3>Sistema de riego con energía renovable</h3>
-          <p>Integración de panel solar, controlador de carga, válvulas eléctricas, telemetría básica y simulación del consumo energético. Documentación técnica y guía de montaje.</p>
-        </div>
-      </div>
-
     </section>
 
-    <section id="talleres" class="section">
-      <h2>Talleres</h2>
-      <p class="muted">Realización de tareas y trabajos de electrónica y programación, además de clases particulares para todos los niveles.</p>
-      <ul class="muted">
+    <!-- Talleres -->
+    <section id="talleres" class="mt-24">
+      <h2 class="section-title">Talleres</h2>
+      <p class="text-gray-400 mt-2">Realización de tareas y trabajos de electrónica y programación, además de clases particulares para todos los niveles.</p>
+      <ul class="mt-4 space-y-2 text-gray-400 list-disc list-inside">
         <li>Realización de tareas y proyectos académicos</li>
         <li>Desarrollo y pruebas de prototipos</li>
         <li>Clases particulares personalizadas (Arduino, ESP32, KiCad)</li>
       </ul>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <h2>Contacto</h2>
-    <div class="contact-grid">
-  <form class="contact-form" action="mailto:caicedosantiago256@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Tu nombre</label>
-    <input id="name" name="name" required>
-    <label for="email">Correo</label>
-    <input id="email" name="email" type="email" required>
-    <label for="message">Mensaje</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-    <button class="btn primary" type="submit">Enviar mensaje</button>
-  </form>
+    <!-- Contacto -->
+    <section id="contact" class="mt-24">
+      <h2 class="section-title">Contacto</h2>
+      <div class="grid md:grid-cols-2 gap-10 mt-8">
+        <form action="mailto:caicedosantiago256@gmail.com" method="post" enctype="text/plain" class="space-y-4 bg-[#111827] p-6 rounded-2xl border border-gray-800">
+          <div>
+            <label for="name" class="block text-sm text-gray-400 mb-1">Tu nombre</label>
+            <input id="name" name="name" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 text-gray-200">
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-gray-400 mb-1">Correo</label>
+            <input id="email" name="email" type="email" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 text-gray-200">
+          </div>
+          <div>
+            <label for="message" class="block text-sm text-gray-400 mb-1">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 text-gray-200"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">Enviar mensaje</button>
+        </form>
+        <aside class="bg-[#111827] p-6 rounded-2xl border border-gray-800">
+          <h3 class="text-xl font-semibold text-blue-300 mb-3">Contacto rápido</h3>
+          <p class="text-gray-400 mb-3">Email: <a href="mailto:caicedosantiago256@gmail.com" class="text-blue-400 hover:underline">caicedosantiago256@gmail.com</a></p>
+          <a href="https://wa.me/qr/A6GDXRAA5AYZG1" target="_blank" class="btn-primary inline-block">WhatsApp</a>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-  <aside class="contact-aside">
-    <div class="card">
-      <h3>Contacto rápido</h3>
-      <p class="muted">Email: <a href="mailto:caicedosantiago256@gmail.com">caicedosantiago256@gmail.com</a></p>
-      <p>
-        <a class="btn primary" href="https://wa.me/qr/A6GDXRAA5AYZG1" target="_blank" rel="noopener noreferrer" aria-label="Reservar taller por WhatsApp">
-          WhatsApp
-        </a>
-      </p>
-    </div>
-  </aside>
-</div>
-
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© AgonTronics — Soluciones electrónicas para tus ideas</div>
-    </div>
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 mt-24 py-6 text-center text-gray-500">
+    © AgonTronics — Soluciones electrónicas para tus ideas
   </footer>
-
-<script>
-document.addEventListener('click', function(e){
-  const modalBtn = e.target.closest('[data-modal]');
-  if(modalBtn){
-    const id = modalBtn.getAttribute('data-modal');
-    const modal = document.getElementById(id);
-    if(modal) modal.setAttribute('aria-hidden','false');
-  }
-  const closeBtn = e.target.closest('[data-modal-close]');
-  if(closeBtn){
-    const modal = closeBtn.closest('.modal');
-    if(modal) modal.setAttribute('aria-hidden','true');
-  }
-  // click outside modal-content closes
-  if(e.target.classList.contains('modal')){
-    e.target.setAttribute('aria-hidden','true');
-  }
-});
-</script>
-
-
-<script>
-function initCarousel(modal){
-  const track = modal.querySelector('.carousel-track');
-  const slides = Array.from(modal.querySelectorAll('.carousel-slide'));
-  const prev = modal.querySelector('.carousel-prev');
-  const next = modal.querySelector('.carousel-next');
-  const dots = Array.from(modal.querySelectorAll('.carousel-dot'));
-  let index = 0;
-  function update(){
-    track.style.transform = 'translateX(' + (-index * 100) + '%)';
-    dots.forEach((d,i)=> d.classList.toggle('active', i===index));
-  }
-  prev.addEventListener('click', ()=>{ index = (index-1+slides.length)%slides.length; update(); });
-  next.addEventListener('click', ()=>{ index = (index+1)%slides.length; update(); });
-  dots.forEach(d=> d.addEventListener('click', ()=>{ index = Number(d.getAttribute('data-index')); update(); }));
-  update();
-}
-document.addEventListener('click', function(e){
-  const modalBtn = e.target.closest('[data-modal]');
-  if(modalBtn){
-    const id = modalBtn.getAttribute('data-modal');
-    const modal = document.getElementById(id);
-    if(modal){
-      modal.setAttribute('aria-hidden','false');
-      // init carousel lazily
-      setTimeout(()=>{ initCarousel(modal); }, 50);
-    }
-  }
-  const closeBtn = e.target.closest('[data-modal-close]');
-  if(closeBtn){
-    const modal = closeBtn.closest('.modal');
-    if(modal) modal.setAttribute('aria-hidden','true');
-  }
-  if(e.target.classList.contains('modal')){
-    e.target.setAttribute('aria-hidden','true');
-  }
-});
-</script>
-
-
-<script>
-// Ensure modals are hidden on load
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.modal').forEach(m=> m.setAttribute('aria-hidden','true'));
-});
-</script>
-
 </body>
 </html>
