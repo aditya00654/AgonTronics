@@ -1,148 +1,65 @@
-:root{
-  --bg: #05060a; /* near black */
-  --card: #0e1530; /* dark blue-ish card */
-  --text: #eaf4ff; /* very light text */
-  --muted: #9aa9c0; /* muted light */
-  --primary: #2EA3F2; /* cyan-blue */
-  --accent: #6b4ef1; /* bluish purple */
-  --header-bg: linear-gradient(90deg,#06102a,#0b1630 60%); /* dark bluish gradient */
-  --footer-bg: linear-gradient(90deg,#071026,#0b1530);
-}
-body{background:var(--bg);color:var(--text)}
+/* --- Estilos adicionales personalizados --- */
 
-body{background:var(--bg);color:var(--text)}
-.container{color:var(--text)}
-.logo-img{height:64px;width:64px;object-fit:contain;border-radius:8px}
-
-:root{
-  --primary: #0D1F44;
-  --accent: #2EA3F2;
-  --muted: #A0A0A0;
-  --white: #ffffff;
-  --max-width: 1100px;
-  --radius: 8px;
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+/* Botones */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg transition;
 }
 
-*{box-sizing:border-box}
-body{font-family:var(--font-sans);margin:0;color:var(--text);background:var(--bg);line-height:1.5}
-a{color:inherit;text-decoration:none}
-.container{max-width:var(--max-width);margin:0 auto;padding:28px;color:var(--text)}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--primary);color:var(--white);font-weight:700;font-size:18px}
-.brand-title{font-weight:700}
-.brand-sub{font-size:13px;color:var(--muted)}
-.main-nav a{margin-left:18px;font-weight:600;color:var(--primary);}
-
-/* Hero */
-.hero{display:flex;gap:40px;align-items:center;padding:56px 0}
-.hero-left{flex:1}
-.hero h1{font-size:34px;margin:0 0 12px}
-.lead{color:var(--muted);margin-bottom:18px}
-.hero-ctas{margin-top:12px}
-.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer}
-.btn.primary{background:var(--primary);color:var(--white)}
-.btn.outline{background:transparent;border:1px solid var(--muted);color:var(--primary)}
-
-/* Hero aside */
-.hero-right{width:320px;max-width:40%}
-
-/* 👇 CAMBIO IMPORTANTE: fondo claro con texto oscuro */
-.card{
-  background:#ffffff;
-  border-radius:10px;
-  padding:14px;
-  border:1px solid #f0f4ff;
-  color:#111111; /* Texto oscuro */
-}
-.card h3,
-.card p,
-.card a,
-.card label{
-  color:#111111; /* Asegura que todo dentro de la tarjeta sea legible */
+.btn-outline {
+  @apply border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold px-5 py-2 rounded-lg transition;
 }
 
-/* Sections */
-.section{margin-top:32px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-
-/* 👇 CAMBIO IMPORTANTE: servicios destacados también con texto oscuro */
-.service{
-  border:1px solid #eee;
-  padding:18px;
-  border-radius:10px;
-  background:#ffffff;
-  color:#111111;
-}
-.service h3,
-.service p{
-  color:#111111;
+/* Secciones */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-blue-400 border-l-4 border-blue-500 pl-3;
 }
 
-.muted{color:#111111}
-
-/* Projects */
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.project{background:#fafafa;border-radius:8px;padding:12px;border:1px solid #f0f0f0;color:#111111;} /* 👈 también texto oscuro */
-.project-img{height:140px;border-radius:6px;margin-bottom:8px;background-size:cover;background-position:center}
-
-/* Contact */
-.contact-grid{display:flex;gap:20px;align-items:flex-start}
-.contact-form{flex:1;display:flex;flex-direction:column;gap:10px}
-.contact-form input,.contact-form textarea{padding:10px;border:1px solid #e3e3e3;border-radius:8px;font-size:14px;color:#111111;} /* 👈 texto oscuro */
-.contact-aside{width:300px;color:#111111;} /* 👈 texto oscuro */
-
-/* Footer */
-.site-footer{border-top:1px solid #eee;padding:28px 0;margin-top:32px;color:#111111}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-
-/* Responsive */
-@media (max-width:900px){
-  .grid,.projects{grid-template-columns:repeat(2,1fr)}
-  .hero{flex-direction:column}
-  .hero-right{max-width:100%;width:100%}
-  .contact-grid{flex-direction:column}
-}
-@media (max-width:600px){
-  .grid,.projects{grid-template-columns:1fr}
-  .main-nav{display:none}
-  .logo{width:48px;height:48px}
-  .hero h1{font-size:24px}
+/* Tarjetas */
+.card {
+  @apply bg-[#111827] p-6 rounded-2xl border border-gray-800 shadow-lg hover:shadow-blue-900/20 transition;
 }
 
-/* Modal */
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:60;padding:20px}
-.modal[aria-hidden="false"]{display:flex}
-.modal-content{background:var(--bg);color:#111111;max-width:720px;padding:20px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6);position:relative}
-.modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;font-size:22px;color:var(--muted);cursor:pointer}
-.btn.small{padding:8px 12px;font-size:13px}
+.card h3 {
+  @apply text-xl font-semibold text-blue-300 mb-2;
+}
 
-/* Logo wrapper */
-.logo-wrap{background:var(--card);padding:6px;border-radius:10px;display:flex;align-items:center;justify-content:center}
-.logo-img{height:56px;width:56px;object-fit:contain;display:block;border-radius:6px}
+.card p {
+  @apply text-gray-400;
+}
 
-.modal[aria-hidden="true"]{display:none}
-.modal[aria-hidden="false"]{display:flex}
+/* Proyectos */
+.project-card {
+  @apply relative rounded-2xl overflow-hidden border border-gray-800 shadow-lg;
+  background-size: cover;
+  background-position: center;
+  height: 260px;
+  transition: transform 0.4s ease;
+}
 
-.site-header{background:var(--header-bg);padding:18px 0}
-.site-footer{background:var(--footer-bg);padding:28px 0;color:var(--muted)}
-.header-inner{align-items:center}
+.project-card:hover {
+  transform: scale(1.03);
+}
 
-h1,h2,h3,h4{color:var(--text);opacity:1}
-.muted{color:var(--muted);opacity:1}
-a{color:var(--primary)}
-.btn.primary{background:var(--primary);color:#041122}
+.project-card .overlay {
+  @apply absolute inset-0 bg-black/70 opacity-0 hover:opacity-100 transition;
+}
 
-/* Ensure full contrast for primary text */
-h1,h2,h3,h4,p,li,a,button,span,div{color:var(--text);opacity:1}
-.muted{color:var(--muted);opacity:1}
+.project-card .content {
+  @apply absolute bottom-0 p-4 text-gray-200;
+}
 
-/* Modal visibility enforced */
-.modal[aria-hidden="true"]{display:none !important;opacity:0;pointer-events:none}
-.modal[aria-hidden="false"]{display:flex !important;opacity:1;pointer-events:auto}
+.project-card:hover .content {
+  @apply text-blue-300;
+}
 
-/* Header contrast */
-.site-header .brand-title{color:var(--text);opacity:1}
-.site-header .brand-sub{color:var(--muted);opacity:1}
-.site-header .main-nav a{color:var(--text);opacity:0.95;font-weight:700}
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
